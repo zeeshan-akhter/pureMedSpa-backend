@@ -1,5 +1,6 @@
 require("./db/db.connect");
 require("mongoose");
+// require("./controllers/number.controller");
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
@@ -10,6 +11,7 @@ const app = express();
 const { corsOptions } = require("./middlewares/cors.middleware");
 const PORT = process.env.PORT || 5000;
 
+// seedNumberData();
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(logAllRequestsMiddleWare);
